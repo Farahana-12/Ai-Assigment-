@@ -1,0 +1,125 @@
+Dijkstra's Road Distance- Indian Cities Road Distance
+we have implemented  Dijkstra's algorithm to find the shortest road distance between two cities in India.The cities and their road distances are stored in a dataset. The dataset is converted into a graph where:
+
+- Cities are represented as nodes.
+- Roads are represented as edges.
+- Road distances are used as edge costs.
+
+Dijkstra's algorithm is then used to find the shortest route between a user-specified starting city and destination city.
+
+Objective
+
+The main objective of this project is to implement Dijkstra's algorithm for finding the shortest path between Indian cities when roads have different distances.
+
+Dataset
+It contains the following information:
+
+- `Origin` - starting city
+- `Destination` - connected city
+- `Distance` - road distance between the cities
+
+Graph Construction:-
+
+The dataset is converted into a graph.
+Each city is treated as a node and each road is treated as an edge.
+Since the roads are considered to work in both directions, both connections are added to the graph.
+
+UGV Path Planning using A* Search
+
+Here we  implements path planning for an Unmanned Ground Vehicle (UGV) moving through a battlefield environment.
+
+The battlefield is represented as a 70 × 70 grid. Some cells in the grid contain obstacles, and the UGV has to find a path from the starting position to the goal position while avoiding these obstacles.
+
+A* search algorithm is used to find the path.
+
+The main objectives  are:
+
+- Generate a battlefield grid.
+- Generate random obstacles in the battlefield.
+- Use A* search to find a path from the start to the goal.
+- Avoid obstacle cells while finding the path.
+- Test the algorithm with different obstacle densities.
+- Measure the performance of the algorithm.
+- Visualize the generated path.
+
+A* Search
+
+A* is an informed search algorithm that uses both the cost already travelled and an estimated cost to the goal.
+
+The evaluation function is:
+
+f(n) = g(n) + h(n)
+
+where:
+
+- g(n) = cost from the start node to the current node
+- h(n) = estimated cost from the current node to the goal
+- f(n) = total estimated cost
+
+Manhattan distance is used as the heuristic because the UGV moves horizontally and vertically on the grid.
+
+Environment :-
+
+The battlefield is represented as a 70 × 70 grid.
+
+The following obstacle densities are tested:
+
+- Low density: 10%
+- Medium density: 20%
+- High density: 30%
+
+The start and goal positions are kept free from obstacles.
+
+Path Planning :-
+
+The UGV starts from the specified starting position and moves through valid neighbouring cells.
+
+The algorithm checks the four possible movements:
+
+- Up
+- Down
+- Left
+- Right
+
+Obstacle cells cannot be entered.
+
+A* continues searching until the goal is reached or no valid path exists.
+
+Performance Measures :-
+
+The following measures are used to evaluate the algorithm:
+
+- Path length
+- Number of explored nodes
+- Execution time
+- Whether a path was successfully found
+
+These measures help compare the performance of A* under different obstacle densities.
+
+
+Handling Dynamic Obstacles in a UGV Environment
+
+In a real-world environment, obstacles may move or appear unexpectedly. Unlike static obstacles, their positions are not known in advance. Therefore, the UGV must continuously monitor its surroundings and update its path.
+
+The UGV can use the A* algorithm with dynamic re-planning to navigate through an environment containing moving or unknown obstacles.
+
+Working Procedure :-
+
+1)Initialize the grid with the start and goal positions.
+
+2)Detect obstacles using sensors.
+
+3)Update the grid whenever new obstacles are detected.
+
+4)Use A* to calculate the path to the goal.
+
+5)Move along the calculated path while monitoring the surroundings.
+
+6)If an obstacle blocks the path, update the grid and calculate a new path from the current position.
+
+7)Repeat this process until the UGV reaches the goal or no safe path is available.
+
+
+By using A* with dynamic re-planning, the UGV can respond to unexpected obstacles and calculate alternative routes. Continuous obstacle detection and path updating help the UGV navigate changing environments and reach its goal.
+
+
